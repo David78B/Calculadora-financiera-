@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Financiera</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+      <h1>Calculadora Financiera</h1>
+      
+      <div class="section">
+        <h2>Calcular Porcentaje</h2>
+        <label for="amount">Cantidad:</label>
+        <input type="number" id="amount" placeholder="Ej: 1000">
+        
+        <label for="percentage">Porcentaje (%):</label>
+        <input type="number" id="percentage" placeholder="Ej: 15">
+        
+        <button onclick="calculatePercentage()">Calcular</button>
+        <p id="percentage-result"></p>
+      </div>
+
+      <div class="section">
+        <h2>Interés Compuesto</h2>
+        <label for="principal">Principal ($):</label>
+        <input type="number" id="principal" placeholder="Ej: 1000">
+        
+        <label for="rate">Tasa de interés anual (%):</label>
+        <input type="number" id="rate" placeholder="Ej: 5">
+        
+        <label for="years">Años:</label>
+        <input type="number" id="years" placeholder="Ej: 10">
+        
+        <label for="compounds">Número de veces que se capitaliza al año:</label>
+        <input type="number" id="compounds" placeholder="Ej: 12 (mensual)">
+        
+        <button onclick="calculateCompoundInterest()">Calcular</button>
+        <p id="compound-result"></p>
+      </div>
+    </div>
+    
+    <div class="guide">
+      <h2>Guía de Uso</h2>
+      <p><strong>Porcentaje:</strong> Ingresa una cantidad y un porcentaje. Por ejemplo, si quieres saber el 15% de 1000, ingresa "1000" en cantidad y "15" en porcentaje.</p>
+      
+      <p><strong>Interés Compuesto:</strong> Introduce el monto inicial (principal), la tasa de interés anual, los años de inversión, y cuántas veces al año se capitaliza el interés (por ejemplo, 12 para capitalización mensual).</p>
+      
+      <p>Haz clic en los botones de "Calcular" para obtener los resultados.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
